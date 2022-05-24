@@ -1,0 +1,21 @@
+.App{
+    display: flex;
+    flex-direction: column;
+}
+.secondary-tittle{
+    text-align: center;
+}
+.container{
+    display: flex;
+}
+.secondary-box{
+    display: flex;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+
+}
