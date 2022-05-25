@@ -4,8 +4,7 @@ $radius:10px;
     font-family: "Ubuntu";
 }
 
-
-.contentd {
+.content {
     position: relative;
     padding: 10px;
     display: flex;
@@ -20,64 +19,25 @@ $radius:10px;
 
 }
 
-.contentd:before{
+.content:before{
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
     margin: -3px;
     border-radius: inherit;
+}
+
+
+.contentdead:before{
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(209, 11, 11));
 }
-.contenta {
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    border: 1px solid transparent;
-    border-radius: $radius;
-    background: white;
-    background-clip: padding-box;
-    padding: 0;
-    max-width: 300px;
-
-}
-
-.contenta:before{
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    margin: -3px;
-    border-radius: inherit;
+.contentalive:before{
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(10, 168, 31));
 }
-.contentu {
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    border: 1px solid transparent;
-    border-radius: $radius;
-    background: white;
-    background-clip: padding-box;
-    padding: 0;
-    max-width: 300px;
-
-}
-
-.contentu:before{
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    margin: -3px;
-    border-radius: inherit;
+.contentunknown:before{
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(172, 172, 172));
 }
-
 .cardname{
     font-size: 1.8em;
     font-weight: bold;

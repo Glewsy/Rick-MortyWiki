@@ -11,10 +11,13 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
 
 
-  let api = `https://rickandmortyapi.com/api/character/?page=1`
   let [fetchData, updateFetchData] = useState([]);
+  let [pageNumber, updatePageNumber] = useState(1);
+  let [search, setSearch] = useState("")
   let {info, results} = fetchData;
-
+  
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
+  
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
@@ -26,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="secondary-tittle">Characters</h1>
+      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="primary-box">
           Filter compontents will be placed here
@@ -36,6 +40,10 @@ function App() {
             </div>
           </div>
       </div>
+      <Pagination
+      info={info}
+      pageNumber={pageNumber}
+      updatePageNumber={updatePageNumber}  />
     </div>
   );
 }

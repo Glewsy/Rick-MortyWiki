@@ -1,0 +1,24 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    list-style: none;
+
+    a {
+        margin: 4px;
+        padding: 4px;
+        border: 1px solid transparent;
+        box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
+        background-color: #0b9dd7;
+        border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.btn {
+    margin: 4px;
+}

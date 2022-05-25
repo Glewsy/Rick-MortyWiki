@@ -16,7 +16,7 @@ const Card = ({ results }) => {
                         (() => {
                             if (status === "Dead") {
                                 return (
-                                    <><div key={id} className={`${styles.contentd}`} >
+                                    <><div key={id} className={`${styles.content} ${styles.contentdead}`} >
                                         <div className={`${styles.dead}`}>{status}</div>
 
                                         <img src={image} alt="Not Found" className={`${styles.cardimg}`} />
@@ -31,7 +31,7 @@ const Card = ({ results }) => {
                                 );
                             } else if (status === "Alive") {
                                 return (
-                                    <><div key={id} className={`${styles.contenta}`} >
+                                    <><div key={id} className={`${styles.content} ${styles.contentalive}`} >
                                         <div className={`${styles.alive}`}>{status}</div>
 
                                         <img src={image} alt="Not Found" className={`${styles.cardimg}`} />
@@ -45,7 +45,7 @@ const Card = ({ results }) => {
                                 );
                             } else {
                                 return (
-                                    <><div key={id} className={`${styles.contentu}`} >
+                                    <><div key={id} className={`${styles.content} ${styles.contentunknown}`} >
                                         <div className={`${styles.unknown}`}>{status}</div>
 
                                         <img src={image} alt="Not Found" className={`${styles.cardimg}`} />
