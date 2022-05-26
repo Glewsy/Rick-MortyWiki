@@ -6,9 +6,11 @@
     list-style: none;
 
     a {
+        color: white;
+        text-decoration: none;
         margin: 4px;
-        padding: 4px;
-        border: 1px solid transparent;
+        padding: 10px;
+        border: 2px solid white;
         box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
         background-color: #0b9dd7;
         border-radius: 5px;
@@ -16,6 +18,28 @@
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+.pageItem{
+    display: flex;
+}
+
+.active{
+    .pageLink{
+        background-color: white;
+         color: #0b9dd7;
+        border: 2px solid #0b9dd7;
+        box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25) inset;
+        border-radius: 5px;
+        }
+}
+
+@media (max-width: 768px){
+    .pagination{font-size: 12px;}
+    .next,
+    .prev{
+        display: none;
     }
 }
 
