@@ -8,6 +8,10 @@
 .container{
     display: flex;
 }
+
+.primary-box{
+    display: flex;
+}
 .secondary-box{
     display: flex;
     justify-content: center;

@@ -1,0 +1,23 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.tittle{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.text{
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(12, 130, 170);
+    &:hover{
+        cursor: pointer;
+    }
+}

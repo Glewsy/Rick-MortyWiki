@@ -15,8 +15,16 @@ function App() {
   let [pageNumber, updatePageNumber] = useState(1);
   let [search, setSearch] = useState("")
   let {info, results} = fetchData;
+  let [status, updateStatus] = useState("");
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
   
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
+  let api = `https://rickandmortyapi.com/api/character/?
+  page=${pageNumber}
+  &name=${search}
+  &status=${status}
+  &gender=${gender}
+  &species=${species}`
   
   useEffect(() => {
     (async function () {
@@ -32,7 +40,14 @@ function App() {
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="primary-box">
-          Filter compontents will be placed here
+          <Filter 
+          pageNumber={pageNumber}
+          status={status}
+          updateStatus={updateStatus}
+          updateSpecies={updateSpecies}
+          updateGender={updateGender}
+          updatePageNumber={updatePageNumber}
+          />
         </div>
         <div className="secondary-box">
             <div className="cards">
