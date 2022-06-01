@@ -9,7 +9,6 @@ const Card = ({ results }) => {
     if (results) {
         display = results.map((c) => {
             let { id, image, name, status, location } = c;
-            console.log(status)
             return (
                 <>
                     {
@@ -31,7 +30,7 @@ const Card = ({ results }) => {
                                 );
                             } else if (status === "Alive") {
                                 return (
-                                    <><div key={id} className={`${styles.content} ${styles.contentalive}`} >
+                                    <><div key={id+9000} className={`${styles.content} ${styles.contentalive}`} >
                                         <div className={`${styles.alive}`}>{status}</div>
 
                                         <img src={image} alt="Not Found" className={`${styles.cardimg}`} />
@@ -45,7 +44,7 @@ const Card = ({ results }) => {
                                 );
                             } else {
                                 return (
-                                    <><div key={id} className={`${styles.content} ${styles.contentunknown}`} >
+                                    <><div key={id+1000} className={`${styles.content} ${styles.contentunknown}`} >
                                         <div className={`${styles.unknown}`}>{status}</div>
 
                                         <img src={image} alt="Not Found" className={`${styles.cardimg}`} />

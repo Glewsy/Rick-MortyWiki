@@ -3,7 +3,6 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 20vw;
 }
 
 .tittle{
@@ -17,6 +16,10 @@
     margin-top: 10px;
     text-align: center;
     color: rgb(12, 130, 170);
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    
     &:hover{
         cursor: pointer;
     }

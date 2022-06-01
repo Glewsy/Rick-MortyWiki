@@ -1,6 +1,8 @@
 .App{
     display: flex;
     flex-direction: column;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 .secondary-tittle{
     text-align: center;
@@ -11,15 +13,17 @@
 
 .primary-box{
     display: flex;
+    flex-basis: 25vw;
+    justify-content: center;
 }
 .secondary-box{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-basis: 75vw;
 }
 .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 70%;
+    justify-content: space-between;
 
 }

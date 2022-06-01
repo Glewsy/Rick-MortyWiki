@@ -24,7 +24,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
                 forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
                 marginPagesDisplayed={width < 576 ? 1 : 2}
                 pageRangeDisplayed={width < 576 ? 1 : 2}
-                pageCount={info?.pages}
+                pageCount={Math.ceil(info?.pages)}
                 onPageChange={pageChange}
                 className={styles.pagination}
                 nextLabel="Next"

@@ -22,7 +22,10 @@ const Filter = ({
         <div className={styles.tittle}>Filters</div>
         <div className={styles.text} onClick={clear}>Clear Filters</div>
         <div className={styles.accordion} id='accordionExample'>
-
+    <Status
+    updatePageNumber={updatePageNumber}
+    updateStatus={updateStatus}
+    />
         </div>
     </div>
   )
