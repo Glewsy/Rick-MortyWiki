@@ -1,28 +1,28 @@
 import FilterBTN from "../FilterBTN";
-import styles from "./categorys.modules.scss"
+import "./Categorys.css"
 
 
 
 const Status = ({updateStatus, updatePageNumber}) => {
     let status = ["Alive", "Dead", "Unknown"];
     return (
-        <div className={styles.accordion}>
-            <h2 className={styles.accordionText} id="headingOne">
-                <button className={styles.accordionBtn} type="button" 
+        <div className="accordion">
+            <h2 className="accordionText" id="headingOne">
+                <button className="accordionBtn" type="button" 
                 data-bs-toggle="collapse" data-bs-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne"
                 > Status </button>
             </h2>
-            <div className={styles.accordionCollapse}
+            <div className="accordionCollapse"
             aria-labelledby="headingOne" data-bs-parent="#accordionExample"
             >
-            <div className={styles.accordionBody}>
+            <div className="accordionBody">
                 {status.map((item,index)=> (
                     <FilterBTN
                     key={index}
                     index={index}
                     name="status"
-                    task={updateStatus}
+                    updateStatus={updateStatus}
                     updatePageNumber={updatePageNumber}
                     input={item}
                     />
