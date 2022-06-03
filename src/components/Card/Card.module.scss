@@ -1,6 +1,6 @@
-$radius:10px;
+$radius: 10px;
 
-*{
+* {
     font-family: "Ubuntu";
 }
 
@@ -19,36 +19,43 @@ $radius:10px;
 
 }
 
-.content:before{
+.content:before {
     content: '';
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
     margin: -3px;
     border-radius: inherit;
 }
 
-
-.contentdead:before{
+.contentDead:before {
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(209, 11, 11));
 }
-.contentalive:before{
+
+.contentAlive:before {
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(10, 168, 31));
 }
-.contentunknown:before{
+
+.contentUnknown:before {
     background: linear-gradient(to right, rgb(14, 132, 168), rgb(172, 172, 172));
 }
-.cardname{
+
+.cardname {
     font-size: 1.8em;
     font-weight: bold;
     padding-bottom: 5px;
     max-width: 300px;
     margin: 10px;
 }
-.cardinfo{
+
+.cardinfo {
     max-width: 300px;
     margin: 10px;
-    .locationName{
+
+    .locationName {
         padding-top: 5px;
         font-size: 1.3em;
     }
@@ -58,14 +65,16 @@ $radius:10px;
     border-radius: $radius $radius 0 0;
     max-width: 300px;
 }
-.status{
+
+.status {
     position: absolute;
     font-size: 20px;
-    top: 10px; right: 20px;
+    top: 10px;
+    right: 20px;
     font-size: 18px;
 }
 
-.alive{
+.alive {
     font-weight: bold;
     color: white;
     padding: 2px 10px;
@@ -77,7 +86,7 @@ $radius:10px;
     background-color: rgb(10, 168, 31);
 }
 
-.dead{
+.dead {
     font-weight: bold;
     color: white;
     padding: 2px 10px;
@@ -89,7 +98,7 @@ $radius:10px;
     background-color: rgb(209, 11, 11);
 }
 
-.unknown{
+.unknown {
     font-weight: bold;
     color: white;
     padding: 2px 10px;

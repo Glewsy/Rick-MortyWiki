@@ -22,6 +22,8 @@
     flex-basis: 75vw;
 }
 .cards{
+    width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

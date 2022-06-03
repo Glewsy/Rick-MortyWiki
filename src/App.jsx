@@ -1,31 +1,25 @@
 
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 import Pagination from "./components/Pagination/Pagination";
-import Filter from "./components/Filter/Filter";
+import Filter from "./components/Filter";
+import Loading from "./components/Loading";
 import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
-
-
-  let [fetchData, updateFetchData] = useState([]);
+  let [fetchData, updateFetchData] = useState();
   let [pageNumber, updatePageNumber] = useState(1);
   let [search, setSearch] = useState("")
-  let {info, results} = fetchData;
   let [status, updateStatus] = useState("");
   let [gender, updateGender] = useState("");
   let [species, updateSpecies] = useState("");
-  
-  let api = `https://rickandmortyapi.com/api/character/?
-  page=${pageNumber}
-  &name=${search}
-  &status=${status}
-  &gender=${gender}
-  &species=${species}`
-  
+
+
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`
+
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
@@ -33,32 +27,35 @@ function App() {
     })();
   }, [api]);
 
-
   return (
     <div className="App">
-      <h1 className="secondary-tittle">Characters</h1>
-      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
-      <div className="container">
-        <div className="primary-box">
-          <Filter 
-          pageNumber={pageNumber}
-          status={status}
-          updateStatus={updateStatus}
-          updateSpecies={updateSpecies}
-          updateGender={updateGender}
-          updatePageNumber={updatePageNumber}
-          />
-        </div>
-        <div className="secondary-box">
-            <div className="cards">
-              <Card results={results}/>
+      {fetchData ?
+        <Fragment>
+          <h1 className="secondary-tittle">Characters</h1>
+          <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
+          <div className="container">
+            <div className="primary-box">
+              <Filter
+                pageNumber={pageNumber}
+                status={status}
+                updateStatus={updateStatus}
+                updateSpecies={updateSpecies}
+                updateGender={updateGender}
+                updatePageNumber={updatePageNumber}
+              />
+            </div>
+            <div className="secondary-box">
+              <div className="cards">
+                <Card results={fetchData.results} />
+              </div>
             </div>
           </div>
-      </div>
-      <Pagination
-      info={info}
-      pageNumber={pageNumber}
-      updatePageNumber={updatePageNumber}  />
+          <Pagination
+            info={fetchData.info}
+            pageNumber={pageNumber}
+            updatePageNumber={updatePageNumber} />
+        </Fragment>
+        : <Loading />}
     </div>
   );
 }
