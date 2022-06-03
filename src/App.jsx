@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
-  let [fetchData, updateFetchData] = useState();
+  let [fetchData, setFetchData] = useState();
   let [pageNumber, updatePageNumber] = useState(1);
   let [search, setSearch] = useState("")
   let [status, updateStatus] = useState("");
@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
-      updateFetchData(data)
+      setFetchData(data)
     })();
   }, [api]);
 
