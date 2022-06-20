@@ -1,11 +1,57 @@
 
 
+
 .accordion{
-    background-color: aliceblue;
+    width: 15vw;
     text-align: center;
-}
-.accordionBody{
     display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.accordionText{
+    margin: 0;
+}
+
+
+.accordionBtn{
+    transition: .3s;
+    background-color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    color: #0b9dd7 ;
+    border: 1px solid lightblue;
+    
+}
+
+
+.accordionBtn:hover{
+    transition: .2s;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.accordionBtnActive{
+    transition: .3s;
+    background-color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    color: #0b9dd7 ;
+    border: 1px solid lightblue;
+}
+
+.accordionBtnActive:hover{
+    cursor: pointer;
+}
+
+.accordionBody{
+    display: none;
+}
+.accordionBodyShow{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }

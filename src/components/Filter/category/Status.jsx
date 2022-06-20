@@ -1,33 +1,35 @@
+import React, { useState } from "react";
 import FilterBTN from "../FilterBTN";
-import "./Categorys.css"
+import "./Categorys.css";
 
 
-
-const Status = ({updateStatus, updatePageNumber}) => {
+const Status = ({ updateStatus, setPageNumber }) => {
     let status = ["Alive", "Dead", "Unknown"];
+    let [changedClass, setChangedClass] = useState("accordionBody")
+    let [changedClassBtn, setChangedClassBtn] = useState("accordionBtn")
+    function cambio() {
+        changedClass === "accordionBody" ? setChangedClass("accordionBodyShow") : setChangedClass("accordionBody")
+        changedClassBtn === "accordionBtn" ? setChangedClassBtn("accordionBtnActive") : setChangedClassBtn("accordionBtn")
+    }
+
+
     return (
         <div className="accordion">
-            <h2 className="accordionText" id="headingOne">
-                <button className="accordionBtn" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne"
+            <h2 className="accordionText">
+                <button className={changedClassBtn} type="button" onClick={cambio}
                 > Status </button>
             </h2>
-            <div className="accordionCollapse"
-            aria-labelledby="headingOne" data-bs-parent="#accordionExample"
-            >
-            <div className="accordionBody">
-                {status.map((item,index)=> (
+            <div className={changedClass} id="accordionBody">
+                {status.map((item, index) => (
                     <FilterBTN
-                    key={index}
-                    index={index}
-                    name="status"
-                    updateStatus={updateStatus}
-                    updatePageNumber={updatePageNumber}
-                    input={item}
+                        key={index}
+                        index={index}
+                        name="status"
+                        task={updateStatus}
+                        setPageNumber={setPageNumber}
+                        input={item}
                     />
                 ))}
-            </div>
             </div>
         </div>
     )

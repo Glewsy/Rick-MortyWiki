@@ -5,16 +5,16 @@ import Status from "./category/Status"
 import styles from "./Filter.module.scss"
 
 const Filter = ({
-  pageNumber, updatePageNumber,
-  updateStatus, updateGender,
-  updateSpecies,
+  pageNumber, setPageNumber,
+  updateStatus, setGender,
+  setSpecies,
 }) => {
 
   let clear = () => {
-    updateGender("");
-    updateSpecies("");
+    setGender("");
+    setSpecies("");
     updateStatus("");
-    updatePageNumber("");
+    setPageNumber("");
     window.location.reload(false);
   };
   return (
@@ -23,10 +23,18 @@ const Filter = ({
       <div className={styles.text} onClick={clear}>Clear Filters</div>
       <div className={styles.accordion} id='accordionExample'>
         <Status
-          updatePageNumber={updatePageNumber}
+          setPageNumber={setPageNumber}
           updateStatus={updateStatus}
         />
+        <Species
+        setPageNumber={setPageNumber}
+        setSpecies={setSpecies}/>
+        <Gender
+        setPageNumber={setPageNumber}
+        setGender={setGender}
+        />
       </div>
+
     </div>
   )
 }
