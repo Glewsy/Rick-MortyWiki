@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Filter.module.scss"
 
-const FilterBTN = ({ input, updateStatus, updatePageNumber, index, name }) => {
+const FilterBTN = ({ input, task, setPageNumber, index, name }) => {
   return (
     <div className={styles.statusContainer}>
       <div className={styles.form}>
@@ -9,7 +9,8 @@ const FilterBTN = ({ input, updateStatus, updatePageNumber, index, name }) => {
           name={name} id={`${name}-${index}`}
         />
         <label onClick={(x) => {
-          updateStatus(input); updatePageNumber(1);
+          task(input)
+          setPageNumber(1);
         }}
           className={styles.FilterBTN}
           htmlFor={`${name}-${index}`}

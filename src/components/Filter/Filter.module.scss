@@ -12,24 +12,32 @@
 }
 
 .text{
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     margin-top: 10px;
     text-align: center;
-    color: rgb(12, 130, 170);
-    border: 1px solid lightblue;
+    color:#0b9dd7;
+    border: 1px solid #0b9dd7;
     border-radius: 5px;
     padding: 10px;
     
     &:hover{
         cursor: pointer;
+        opacity: 0.7;
     }
+}
+
+.accordion{
+    border-left: 1px solid #0b9dd7;
+    border-right: 1px solid #0b9dd7;
 }
 
 
 .statusContainer{
-
+ width: fit-content;
     .form{
-        display: flex;
+        display: inline-block;
+        width: fit-content;
         text-decoration: none;
         .input{
             visibility: none;
@@ -45,13 +53,17 @@
         .FilterBTN{
             padding: 5px;
             border: 2px solid #0b9dd7;
-            width: 100%;
             font-size: 20px;
-            margin: 10px;
+            margin: 10px 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 3px rgb(136, 136, 136);
+            display: flex;
+            flex-wrap: wrap;
+            color: #0b9dd7;
             &:hover{
                 cursor: pointer;
+                transition: .2s;
+                opacity: .7;
 
             }
         }

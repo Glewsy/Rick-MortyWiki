@@ -11,11 +11,11 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   let [fetchData, setFetchData] = useState();
-  let [pageNumber, updatePageNumber] = useState(1);
+  let [pageNumber,setPageNumber] = useState(1);
   let [search, setSearch] = useState("")
   let [status, updateStatus] = useState("");
-  let [gender, updateGender] = useState("");
-  let [species, updateSpecies] = useState("");
+  let [gender, setGender] = useState("");
+  let [species, setSpecies] = useState("");
 
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`
@@ -26,22 +26,21 @@ function App() {
       setFetchData(data)
     })();
   }, [api]);
-
   return (
     <div className="App">
       {fetchData ?
         <Fragment>
           <h1 className="secondary-tittle">Characters</h1>
-          <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
+          <Search setSearch={setSearch} setPageNumber={setPageNumber} />
           <div className="container">
             <div className="primary-box">
               <Filter
                 pageNumber={pageNumber}
                 status={status}
                 updateStatus={updateStatus}
-                updateSpecies={updateSpecies}
-                updateGender={updateGender}
-                updatePageNumber={updatePageNumber}
+                setSpecies={setSpecies}
+                setGender={setGender}
+                setPageNumber={setPageNumber}
               />
             </div>
             <div className="secondary-box">
@@ -53,7 +52,7 @@ function App() {
           <Pagination
             info={fetchData.info}
             pageNumber={pageNumber}
-            updatePageNumber={updatePageNumber} />
+            setPageNumber={setPageNumber} />
         </Fragment>
         : <Loading />}
     </div>
