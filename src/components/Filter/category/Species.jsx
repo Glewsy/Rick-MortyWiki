@@ -9,9 +9,13 @@ const Species = ({ setSpecies, setPageNumber }) => {
     "Animal", "Disease","Robot","Cronenberg","Planet"];
     let [changedClass, setChangedClass] = useState("accordionBody")
     let [changedClassBtn, setChangedClassBtn] = useState("accordionBtn")
+    let [arrowDirection, setArrowDirection] = useState("arrowOff")
+
     function cambio() {
         changedClass === "accordionBody" ? setChangedClass("accordionBodyShow") : setChangedClass("accordionBody")
         changedClassBtn === "accordionBtn" ? setChangedClassBtn("accordionBtnActive") : setChangedClassBtn("accordionBtn")
+        arrowDirection === "arrowOff" ? setArrowDirection("arrowOn") : setArrowDirection("arrowOff")
+
     }
 
 
@@ -19,7 +23,7 @@ const Species = ({ setSpecies, setPageNumber }) => {
         <div className="accordion">
             <h2 className="accordionText">
                 <button className={changedClassBtn} type="button" onClick={cambio}
-                > Species </button>
+                > Species <div className={arrowDirection}></div> </button>
             </h2>
             <div className={changedClass} id="accordionBody">
                 {species.map((item, index) => (

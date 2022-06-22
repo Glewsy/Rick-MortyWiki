@@ -12,21 +12,24 @@
 }
 
 .text{
-    font-size: 19px;
+    font-size: 20px;
+    font-weight: bold;
     margin-top: 10px;
     text-align: center;
-    color: rgb(12, 130, 170);
-    border: 1px solid lightblue;
+    color:#0b9dd7;
+    border: 1px solid #0b9dd7;
     border-radius: 5px;
     padding: 10px;
     
     &:hover{
         cursor: pointer;
+        opacity: 0.7;
     }
 }
 
 .accordion{
-    border: 1px solid lightblue;
+    border-left: 1px solid #0b9dd7;
+    border-right: 1px solid #0b9dd7;
 }
 
 

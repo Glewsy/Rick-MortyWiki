@@ -7,9 +7,11 @@ const Status = ({ updateStatus, setPageNumber }) => {
     let status = ["Alive", "Dead", "Unknown"];
     let [changedClass, setChangedClass] = useState("accordionBody")
     let [changedClassBtn, setChangedClassBtn] = useState("accordionBtn")
+    let [arrowDirection, setArrowDirection] = useState("arrowOff")
     function cambio() {
         changedClass === "accordionBody" ? setChangedClass("accordionBodyShow") : setChangedClass("accordionBody")
         changedClassBtn === "accordionBtn" ? setChangedClassBtn("accordionBtnActive") : setChangedClassBtn("accordionBtn")
+        arrowDirection === "arrowOff" ? setArrowDirection("arrowOn") : setArrowDirection("arrowOff")
     }
 
 
@@ -17,7 +19,7 @@ const Status = ({ updateStatus, setPageNumber }) => {
         <div className="accordion">
             <h2 className="accordionText">
                 <button className={changedClassBtn} type="button" onClick={cambio}
-                > Status </button>
+                > Status <div className={arrowDirection}></div> </button>
             </h2>
             <div className={changedClass} id="accordionBody">
                 {status.map((item, index) => (
