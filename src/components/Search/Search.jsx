@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from "./Search.module.scss"
 
-const Search = ({setSearch, updatePageNumber }) => {
+const Search = ({setSearch, setPageNumber }) => {
     let searchBtn = (e)=>{
         e.preventDefault();
     };
     return (
         <form className={`${styles.search}`}>
             <input onChange={(e)=> {
-                updatePageNumber(1);
+                setPageNumber(1);
                 setSearch(e.target.value);
             }}
             placeholder="Search for characters"

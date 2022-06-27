@@ -3,31 +3,31 @@ import FilterBTN from "../FilterBTN";
 import "./Categorys.css";
 
 
-const Status = ({ updateStatus, setPageNumber }) => {
+const Status = ({ setStatus, setPageNumber }) => {
     let status = ["Alive", "Dead", "Unknown"];
-    let [changedClass, setChangedClass] = useState("accordionBody")
-    let [changedClassBtn, setChangedClassBtn] = useState("accordionBtn")
+    let [changedClass, setChangedClass] = useState("accordion-body-off")
+    let [changedClassBtn, setChangedClassBtn] = useState("button-off")
     let [arrowDirection, setArrowDirection] = useState("arrowOff")
     function cambio() {
-        changedClass === "accordionBody" ? setChangedClass("accordionBodyShow") : setChangedClass("accordionBody")
-        changedClassBtn === "accordionBtn" ? setChangedClassBtn("accordionBtnActive") : setChangedClassBtn("accordionBtn")
+        changedClass === "accordion-body-off" ? setChangedClass("accordion-body-on") : setChangedClass("accordion-body-off")
+        changedClassBtn === "button-off" ? setChangedClassBtn("button-on") : setChangedClassBtn("button-off")
         arrowDirection === "arrowOff" ? setArrowDirection("arrowOn") : setArrowDirection("arrowOff")
     }
 
 
     return (
-        <div className="accordion">
-            <h2 className="accordionText">
+        <div className="accordion-container">
+            <h2 className="accordion-buttton">
                 <button className={changedClassBtn} type="button" onClick={cambio}
                 > Status <div className={arrowDirection}></div> </button>
             </h2>
-            <div className={changedClass} id="accordionBody">
+            <div className={changedClass}>
                 {status.map((item, index) => (
                     <FilterBTN
                         key={index}
                         index={index}
                         name="status"
-                        task={updateStatus}
+                        task={setStatus}
                         setPageNumber={setPageNumber}
                         input={item}
                     />

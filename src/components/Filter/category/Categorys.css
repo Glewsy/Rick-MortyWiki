@@ -1,7 +1,7 @@
 
 
 
-.accordion{
+.accordion-container{
     width: 15vw;
     text-align: center;
     display: flex;
@@ -10,13 +10,14 @@
     
 }
 
-.accordionText{
+.accordion-buttton{
     margin: 0;
     position: relative;
 }
 
 
-.accordionBtn{
+.button-off{
+    display: flex;
     transition: .3s;
     background-color: white;
     width: 100%;
@@ -24,41 +25,46 @@
     padding: 10px;
     color: #0b9dd7 ;
     border: none;
-    border: 1px solid #0b9dd7;
+    border: 1px solid lightgray;
     border-radius: 5px;
     
 }
 
 
-.accordionBtn:hover{
+.button-off:hover{
     transition: .2s;
     cursor: pointer;
     opacity: .8;
+    letter-spacing: 1px;
 }
 
-.accordionBtnActive{
+.button-on{
+    display: flex;
     transition: .3s;
     background-color: #0b9dd7;
     width: 100%;
     font-size: 20px;
     padding: 10px;
     color: white ;
-    border: 1px solid #0b9dd7;
+    border: 3px solid hsl(197, 100%, 81%);
+    border-radius: 5px;
+    letter-spacing: 1px;
 
 }
 
-.accordionBtnActive:hover{
+.button-on:hover{
     cursor: pointer;
+    opacity: .8;
 }
 
-.accordionBody{
+.accordion-body-off{
     display: none;
 }
-.accordionBodyShow{
+.accordion-body-on{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid #0b9dd7;
+    border: 1px solid lightgray;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
