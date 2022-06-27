@@ -6,25 +6,25 @@ import styles from "./Filter.module.scss"
 
 const Filter = ({
   pageNumber, setPageNumber,
-  updateStatus, setGender,
+  setStatus, setGender,
   setSpecies,
 }) => {
 
   let clear = () => {
     setGender("");
     setSpecies("");
-    updateStatus("");
+    setStatus("");
     setPageNumber("");
     window.location.reload(false);
   };
   return (
-    <div className={styles.container}>
-      <div className={styles.tittle}>Filters</div>
-      <div className={styles.text} onClick={clear}>Clear Filters</div>
-      <div className={styles.accordion} id='accordionExample'>
+    <div className={styles.filterMainContainer}>
+      <div className={styles.filterTittle}>Filters</div>
+      <div className={styles.filterClear} onClick={clear}>Clear Filters</div>
+      <div className={styles.filterSubContainer} >
         <Status
           setPageNumber={setPageNumber}
-          updateStatus={updateStatus}
+          setStatus={setStatus}
         />
         <Species
         setPageNumber={setPageNumber}

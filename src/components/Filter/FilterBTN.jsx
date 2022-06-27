@@ -3,9 +3,9 @@ import styles from "./Filter.module.scss"
 
 const FilterBTN = ({ input, task, setPageNumber, index, name }) => {
   return (
-    <div className={styles.statusContainer}>
-      <div className={styles.form}>
-        <input className={styles.input} type="radio"
+    <div className={styles.filterBtnContainer}>
+      <div className={styles.filterBtnForm}>
+        <input className={styles.filterBtnInput} type="radio"
           name={name} id={`${name}-${index}`}
         />
         <label onClick={(x) => {

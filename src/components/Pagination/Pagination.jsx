@@ -3,10 +3,10 @@ import ReactPaginate from "react-paginate";
 import styles from "./Pagination.module.scss"
 
 
-const Pagination = ({ pageNumber, info, updatePageNumber }) => {
+const Pagination = ({ pageNumber, info, setPageNumber }) => {
 
     let pageChange = (data) => {
-        updatePageNumber(data.selected + 1);
+        setPageNumber(data.selected + 1);
     }
     const [width, setWidth] = useState(window.innerWidth);
     const updateDimensions = () => {

@@ -1,45 +1,47 @@
 
 
-.container{
+.filterMainContainer{
     display: flex;
     flex-direction: column;
 }
 
-.tittle{
+.filterTittle{
     text-align: center;
     font-size: 26px;
     font-weight: bold;
 }
 
-.text{
+.filterClear{
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
     color:#0b9dd7;
-    border: 1px solid #0b9dd7;
+    border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
     
     &:hover{
+        transition: .5s;
         cursor: pointer;
         opacity: 0.7;
+        background-color: rgb(251, 251, 251);
     }
 }
-
-.accordion{
-    border-left: 1px solid #0b9dd7;
-    border-right: 1px solid #0b9dd7;
+.filterSubContainer{
+    border: 5px solid hsl(210, 69%, 99%);
+    border-top: none;
 }
 
 
-.statusContainer{
+
+.filterBtnContainer{
  width: fit-content;
-    .form{
+    .filterBtnForm{
         display: inline-block;
         width: fit-content;
         text-decoration: none;
-        .input{
+        .filterBtnInput{
             visibility: none;
             opacity: 0;
             display: none;
@@ -48,15 +50,13 @@
             background-color: #0b9dd7;
             color: white;
             border: 1px solid #0b9dd7;
-            box-shadow: 0px 0px 5px rgb(63, 63, 63) inset;
         }
         .FilterBTN{
             padding: 5px;
-            border: 2px solid #0b9dd7;
+            border: 1px solid #0b9dd7;
             font-size: 20px;
             margin: 10px 20px;
             border-radius: 5px;
-            box-shadow: 0px 0px 3px rgb(136, 136, 136);
             display: flex;
             flex-wrap: wrap;
             color: #0b9dd7;
