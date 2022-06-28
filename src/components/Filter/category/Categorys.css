@@ -2,7 +2,6 @@
 
 
 .accordion-container{
-    width: 15vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -22,8 +21,7 @@
     background-color: white;
     width: 100%;
     font-size: 20px;
-    padding: 10px;
-    color: #0b9dd7 ;
+    padding: 15px;
     border: none;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -44,7 +42,7 @@
     background-color: #0b9dd7;
     width: 100%;
     font-size: 20px;
-    padding: 10px;
+    padding: 13px;
     color: white ;
     border: 3px solid hsl(197, 100%, 81%);
     border-radius: 5px;
@@ -88,4 +86,27 @@
     position: absolute;
     right: 10%;
     bottom: 40%;
+}
+
+.inputGroup{
+    padding: 5px;
+    text-align: start;
+    border: 1px solid #0b9dd7 ;
+    border-radius: 5px;
+}
+.formGroup{
+    border: none;
+    font-size: 21px;
+    width: 100%;
+    border-radius: 5px;
+}
+.formGroup:focus{
+    outline: none;
+    opacity: .9;
+}
+
+
+option:checked{
+    background-color: #0b9dd7;
+    color: white;
 }

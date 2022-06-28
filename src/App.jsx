@@ -50,7 +50,7 @@ const Home = () => {
     <div className="App">
       {fetchData ?
         <Fragment>
-          <h1 className="secondary-tittle">Characters</h1>
+          <h1 className="secondary-tittlee">Characters</h1>
           <Search setSearch={setSearch} setPageNumber={setPageNumber} />
           <div className="container">
             <div className="primary-box">
