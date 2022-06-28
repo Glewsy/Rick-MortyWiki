@@ -4,14 +4,14 @@ import Loading from '../components/Loading';
 import InputGroup from "../components/Filter/category/InputGroup"
 import "./styles.css"
 
-const Episodes = () => {
+const Location = () => {
 
     let [results, setResults] = useState([])
-    let [id, setID] = useState(1);
+    let [number, setNumber] = useState(1);
     let [info, setInfo] = useState([])
-    let { air_date, episode, name } = info
+    let { dimension, type, name } = info
 
-    let api = `https://rickandmortyapi.com/api/episode/${id}`
+    let api = `https://rickandmortyapi.com/api/location/${number}`
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ const Episodes = () => {
             setInfo(data);
 
             let a = await Promise.all(
-                data.characters.map((x) => {
+                data.residents.map((x) => {
                     return fetch(x).then((res) => res.json())
                 })
             );
@@ -34,20 +34,20 @@ const Episodes = () => {
                 <Fragment>
                     <div className="tittle-container">
                         <h1 className='primary-tittle'>
-                            Episode name :{" "}
+                           Location :{" "}
                             <span className='primary-tittle-name'>{name === "" ? "unknown" : name}</span>
                         </h1>
                         <h5 className='secondary-tittle'>
-                            Air Date: {air_date === "" ? "unknown" : air_date}
+                         Dimension: {dimension === "" ? "unknown" : dimension}
                         </h5>
                         <h6 className='characters-tittle'>
-                            Number of characters : {results.length}
+                           Type : {type === ""? "Unknown" : type}
                         </h6>
                     </div>
                     <div className="container">
                         <div className="primary-box">
-                            <h4 className="episode-box"> Pick Episodes</h4>
-                            <InputGroup  setID={setID} total = {51}  name="Episode"/>
+                            <h4 className="episode-box"> Pick Location</h4>
+                            <InputGroup  name="Location" setID = {setNumber}  total={126}/>
                         </div>
                         <div className="secondary-box">
                             <div className="cards">
@@ -62,4 +62,4 @@ const Episodes = () => {
     )
 }
 
-export default Episodes
+export default Location

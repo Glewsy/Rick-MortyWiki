@@ -4,8 +4,9 @@
     padding-right: 50px;
     padding-left: 50px;
 }
-.secondary-tittle{
+.secondary-tittlee{
     text-align: center;
+    font-size: 36px ;
 }
 .container{
     display: flex;
