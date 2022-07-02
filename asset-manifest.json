@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Rick-MortyWiki/static/css/main.b74e6ed3.css",
+    "main.js": "/Rick-MortyWiki/static/js/main.5d939928.js",
+    "index.html": "/Rick-MortyWiki/index.html",
+    "main.b74e6ed3.css.map": "/Rick-MortyWiki/static/css/main.b74e6ed3.css.map",
+    "main.5d939928.js.map": "/Rick-MortyWiki/static/js/main.5d939928.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b74e6ed3.css",
+    "static/js/main.5d939928.js"
+  ]
+}
