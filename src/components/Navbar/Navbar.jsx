@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className={styles.navMainContainer}>
             <div className={styles.navSubContainer}>
-                <Link to="/" className={styles.navLink}>
+                <Link to="/" className={`${styles.navLink} ${styles.MainTittle}`}>
                     Rick & Morty <span className={styles.navTittle}>WiKi</span>
                 </Link>
                 <div

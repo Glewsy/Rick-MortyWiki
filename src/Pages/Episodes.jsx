@@ -51,7 +51,7 @@ const Episodes = () => {
                         </div>
                         <div className="secondary-box">
                             <div className="cards">
-                                <Card results={results}  />
+                                <Card page="/episodes/" results={results}  />
                             </div>
                         </div>
                     </div>

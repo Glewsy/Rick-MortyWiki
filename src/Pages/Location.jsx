@@ -51,7 +51,7 @@ const Location = () => {
                         </div>
                         <div className="secondary-box">
                             <div className="cards">
-                                <Card results={results}  />
+                                <Card page="/location/" results={results}  />
                             </div>
                         </div>
                     </div>

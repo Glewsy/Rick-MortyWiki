@@ -1,5 +1,6 @@
 .navMainContainer{
     display: flex;
+    background-color: #eee;
     .navSubContainer{
         padding: 30px;
         width: 100%;
@@ -18,6 +19,10 @@
                 color: blue;
                 margin-left: 5px;
             }
+        }
+        .MainTittle{
+            font-size: 40px;
+            font-weight: bold;
         }
         .navButtonsContainer{
             width: 20vw;
