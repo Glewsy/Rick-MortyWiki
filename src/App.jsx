@@ -9,6 +9,7 @@ import Loading from "./components/Loading";
 import Navbar from "./components/Navbar/Navbar";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
+import CardDetails from "./components/Card/CardsDetails"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,8 +20,11 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Episodes" element={<Episodes />} />
-        <Route path="/Location" element={<Location />} />
+        <Route path="/:id" element={<CardDetails />} />
+        <Route path="/episodes" element={<Episodes />} />
+        <Route path="/episodes/:id" element={<CardDetails />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/location/:id" element={<CardDetails />} />
       </Routes>
     </Router>
   )
@@ -65,7 +69,7 @@ const Home = () => {
             </div>
             <div className="secondary-box">
               <div className="cards">
-                <Card results={fetchData.results} />
+                <Card page="/" results={fetchData.results} />
               </div>
             </div>
           </div>
