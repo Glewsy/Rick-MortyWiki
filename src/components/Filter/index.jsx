@@ -11,11 +11,11 @@ const Filter = ({
 }) => {
 
   let clear = () => {
+    window.location.reload(false);
     setGender("");
     setSpecies("");
     setStatus("");
     setPageNumber("");
-    window.location.reload(false);
   };
   return (
     <div className={styles.filterMainContainer}>
