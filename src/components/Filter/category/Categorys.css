@@ -110,3 +110,18 @@ option:checked{
     background-color: #0b9dd7;
     color: white;
 }
+
+
+@media (max-width: 576px){
+    .button-off:hover, .button-on:hover{
+        letter-spacing: 0px;
+    }
+
+    .button-off, .button-on{
+
+        width: 120px;
+    }
+    .arrowOff, .arrowOn{
+        margin: 5px;
+    }
+}

@@ -33,3 +33,18 @@
 .active{
     color: blue !important;
 }
+
+@media (max-width: 576px){
+
+    .primary-box{
+        margin-right: 10px;
+    }
+    .container{
+        padding: 5px;
+    }
+
+    .secondary-tittlee{
+        font-size: 2em;
+        margin: 10px;
+    }
+}

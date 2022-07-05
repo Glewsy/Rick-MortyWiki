@@ -19,7 +19,7 @@ function App() {
         <Navbar />
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Rick-MortyWiki" element={<Home />} />
         <Route path="/:id" element={<CardDetails />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/episodes/:id" element={<CardDetails />} />

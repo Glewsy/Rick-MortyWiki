@@ -9,13 +9,13 @@ const Navbar = () => {
     return (
         <nav className={styles.navMainContainer}>
             <div className={styles.navSubContainer}>
-                <Link to="/" className={`${styles.navLink} ${styles.MainTittle}`}>
+                <Link to="/Rick-MortyWiki" className={`${styles.navLink} ${styles.MainTittle}`}>
                     Rick & Morty <span className={styles.navTittle}>WiKi</span>
                 </Link>
                 <div
                     className={styles.navButtonsContainer}>
                     <div className={styles.navButtons}>
-                        <NavLink to="/" className={styles.navLink}>
+                        <NavLink to="/Rick-MortyWiki" className={styles.navLink}>
                             Characters
                         </NavLink>
                         <NavLink to="/Episodes" className={styles.navLink}>
