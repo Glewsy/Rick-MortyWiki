@@ -159,4 +159,17 @@ $radius: 10px;
     .content{
         max-width: 50vw;
     }
+
+    .alive , .dead , .unknown{
+        font-size: 14px;
+    }
+
+    .cardname{
+        font-size: 1.2em;
+    }
+    .cardinfo{
+        .locationName{
+            font-size: 14px;
+        }
+    }
 }
