@@ -19,7 +19,7 @@ const Gender = ({setGender, setPageNumber}) => {
 
   return (
     <div className="accordion-container">
-    <h2 className="accordion-buttton">
+    <h2 className="button-container">
         <button className={changedClassBtn} type="button" onClick={cambio}
         > Gender <div className={arrowDirection}></div> </button>
     </h2>

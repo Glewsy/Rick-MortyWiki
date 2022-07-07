@@ -37,3 +37,11 @@
         width: 80px;
     }
 }
+
+@media (max-width: 365px){
+
+
+    .btn{
+        display: none;
+    }
+}

@@ -1,57 +1,60 @@
-
-
-.filterMainContainer{
+.filterMainContainer {
     display: flex;
     flex-direction: column;
 }
 
-.filterTittle{
+.filterTittle {
     text-align: center;
     font-size: 26px;
     font-weight: bold;
 }
 
-.filterClear{
+.filterClear {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
-    color:#0b9dd7;
+    color: #0b9dd7;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
-    
-    &:hover{
+
+    &:hover {
         transition: .5s;
         cursor: pointer;
         opacity: 0.7;
         background-color: rgb(251, 251, 251);
     }
 }
-.filterSubContainer{
+
+.filterSubContainer {
     border-top: none;
 }
 
 
 
-.filterBtnContainer{
- width: fit-content;
-    .filterBtnForm{
+.filterBtnContainer {
+    width: fit-content;
+
+    .filterBtnForm {
         display: inline-block;
         width: fit-content;
         text-decoration: none;
         margin: 0 20px;
-        .filterBtnInput{
+
+        .filterBtnInput {
             visibility: none;
             opacity: 0;
             display: none;
         }
-        input[type=radio]:checked + label{
+
+        input[type=radio]:checked+label {
             background-color: #0b9dd7;
             color: white;
             border: 1px solid #0b9dd7;
         }
-        .FilterBTN{
+
+        .FilterBTN {
             padding: 10px;
             border: 1px solid #0b9dd7;
             font-size: 20px;
@@ -60,7 +63,8 @@
             display: flex;
             flex-wrap: wrap;
             color: #0b9dd7;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
                 transition: .2s;
                 opacity: .7;
@@ -70,8 +74,30 @@
     }
 }
 
-@media (max-width: 576px){
-    .filterMainContainer{
-        width: 30vw;
+
+
+@media (max-width: 576px) {
+    .filterMainContainer {
+        width: 35vw;
     }
+
+    .filterTittle {
+        font-size: 20px;
+    }
+
+    .filterClear {
+        font-size: 16px;
+    }
+
+    .filterBtnContainer {
+        .filterBtnForm {
+            margin: 0;
+
+            .FilterBTN {
+                font-size: 14px;
+                margin: 5px 1px;
+            }
+        }
+    }
+
 }

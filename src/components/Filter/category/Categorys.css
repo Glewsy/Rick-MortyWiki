@@ -9,7 +9,7 @@
     
 }
 
-.accordion-buttton{
+.button-container{
     margin: 0;
     position: relative;
 }
@@ -113,15 +113,36 @@ option:checked{
 
 
 @media (max-width: 576px){
+
+    .button-container{
+        width: 100%;
+
+        
+    }
+
     .button-off:hover, .button-on:hover{
         letter-spacing: 0px;
     }
 
     .button-off, .button-on{
 
-        width: 120px;
+        width: 100%;
+        
     }
     .arrowOff, .arrowOn{
         margin: 5px;
     }
+
+    .formGroup{
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 365px){
+
+    .button-off, .button-on{
+        font-size: 15px;
+    }
+    
 }
